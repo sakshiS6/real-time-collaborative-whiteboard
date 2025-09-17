@@ -1,18 +1,13 @@
 {
   "name": "real-time-collaborative-whiteboard",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
-  "engines": {
-    "node": "22.x",
-    "npm": "9.x"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^4.2.0"
