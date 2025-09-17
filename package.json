@@ -1,11 +1,11 @@
 {
-  "name": "openboard_clone",
+  "name": "real-time-collaborative-whiteboard",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "engines": {
-    "node": "14.16.0",
-    "npm": "6.14.11"
+    "node": "22.x",
+    "npm": "9.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
