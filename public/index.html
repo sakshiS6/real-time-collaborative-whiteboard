@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <title>Openboard_Clone</title>
+</head>
+<body>
+    <header style="background-color:#00796b; color:white; padding: 1rem; text-align: center; font-size: 1.5rem; font-weight: bold;">
+        
+    </header>
+    <div class="options-cont" title="Toggle Tools">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont sbcale-tools" title="Drawing Tools">
+        <img class="pencil" src="Icons/Pencil.svg" alt="Pencil Tool" title="Pencil Tool">
+        <img class="eraser" src="Icons/Eraser.svg" alt="Eraser Tool" title="Eraser Tool">
+        <img class="download" src="Icons/Download.svg" alt="Download" title="Download Drawing">
+        <img class="upload" src="Icons/Upload.svg" alt="Upload" title="Upload Image">
+        <img class="sticky" src="Icons/StickyNote.svg" alt="Sticky Note" title="Add Sticky Note">
+        <img class="redo" src="Icons/Redo.svg" alt="Redo" title="Redo Last Action">
+        <img class="undo" src="Icons/Undo.svg" alt="Undo" title="Undo Last Action">
+    </div>
+
+    <div class="pencil-tool-cont" title="Pencil Settings">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width" aria-label="Pencil Width">
+        </div>
+        <div class="pencil-color-cont" role="radiogroup" aria-label="Pencil Colors">
+            <div class="black pencil-color" tabindex="0" role="radio" aria-checked="true" aria-label="Black Color"></div>
+            <div class="red pencil-color" tabindex="0" role="radio" aria-checked="false" aria-label="Red Color"></div>
+            <div class="blue pencil-color" tabindex="0" role="radio" aria-checked="false" aria-label="Blue Color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont" title="Eraser Settings">
+        <input type="range" min="2" max="10" value="3" class="eraser-width" aria-label="Eraser Width">
+    </div>
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
