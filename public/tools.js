@@ -11,7 +11,7 @@ let pencilFlag = false;
 let eraserFlag = false;
 
 optionsCont.addEventListener("click", (e) => {
-    // true -> tools show, false -> hide tools
+    
     optionsFlag = !optionsFlag;
 
     if (optionsFlag) openTools();
@@ -36,7 +36,7 @@ function closeTools() {
 }
 
 pencil.addEventListener("click", (e) => {
-    // true -> show pencil tool, false -> hide pencil tool
+    
     pencilFlag = !pencilFlag;
 
     if (pencilFlag) pencilToolCont.style.display = "block";
@@ -44,7 +44,7 @@ pencil.addEventListener("click", (e) => {
 })
 
 eraser.addEventListener("click", (e) => {
-    // true -> show eraser tool, false -> hide eraser tool
+    
     eraserFlag = !eraserFlag;
 
     if (eraserFlag) eraserToolCont.style.display = "flex";
@@ -128,8 +128,7 @@ function dragAndDrop(element, event) {
 
     moveAt(event.pageX, event.pageY);
 
-    // moves the ball at (pageX, pageY) coordinates
-    // taking initial shifts into account
+    
     function moveAt(pageX, pageY) {
         element.style.left = pageX - shiftX + 'px';
         element.style.top = pageY - shiftY + 'px';
@@ -139,10 +138,10 @@ function dragAndDrop(element, event) {
         moveAt(event.pageX, event.pageY);
     }
 
-    // move the ball on mousemove
+    
     document.addEventListener('mousemove', onMouseMove);
 
-    // drop the ball, remove unneeded handlers
+    
     element.onmouseup = function () {
         document.removeEventListener('mousemove', onMouseMove);
         element.onmouseup = null;

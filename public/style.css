@@ -4,14 +4,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white; /* Light cyan background for better UI */
+    background-color: white; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
 .options-cont {
     height: 4rem;
     width: 3.5rem;
-    background-color: #4db6ac; /* Changed to teal shade */
+    background-color: #4db6ac; 
     position: absolute;
     top: 2rem;
     left: 2rem;
@@ -25,13 +25,13 @@ body {
     transition: background-color 0.3s ease;
 }
 .options-cont:hover {
-    background-color: #00897b; /* Darker teal on hover */
+    background-color: #00897b; 
 }
 .tools-cont {
     display: flex;
     height: 5rem;
     width: 55vw;
-    background-color: #80cbc4; /* Lighter teal */
+    background-color: #80cbc4; 
     justify-content: space-around;
     position: absolute;
     top: 2rem;
@@ -169,7 +169,7 @@ img {
 .options-cont {
     height: 4rem;
     width: 3.5rem;
-    background-color: #4db6ac; /* Changed to teal shade */
+    background-color: #4db6ac; 
     position: absolute;
     top: 2rem;
     left: 2rem;
@@ -183,7 +183,7 @@ img {
     transition: background-color 0.3s ease;
 }
 .options-cont:hover {
-    background-color: #00897b; /* Darker teal on hover */
+    background-color: #00897b; 
 }
 .tools-cont {
     display: flex;

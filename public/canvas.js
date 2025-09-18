@@ -14,25 +14,25 @@ let eraserColor = "white";
 let penWidth = pencilWidthElem.value;
 let eraserWidth = eraserWidthElem.value;
 
-let undoRedoTracker = []; //Data
-let track = 0; // Represent which action from tracker array
+let undoRedoTracker = []; 
+let track = 0; 
 
 let mouseDown = false;
 
-// API
+
 let tool = canvas.getContext("2d");
 
 tool.strokeStyle = penColor;
 tool.lineWidth = penWidth;
 
-// mousedown -> start new path, mousemove -> path fill (graphics)
+
 canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
     let data = {
         x: e.clientX,
         y: e.clientY
     }
-    // send data to server
+   
     socket.emit("beginPath", data);
 })
 canvas.addEventListener("mousemove", (e) => {
@@ -56,7 +56,7 @@ canvas.addEventListener("mouseup", (e) => {
 
 undo.addEventListener("click", (e) => {
     if (track > 0) track--;
-    // track action
+    
     let data = {
         trackValue: track,
         undoRedoTracker
@@ -65,7 +65,7 @@ undo.addEventListener("click", (e) => {
 })
 redo.addEventListener("click", (e) => {
     if (track < undoRedoTracker.length-1) track++;
-    // track action
+    
     let data = {
         trackValue: track,
         undoRedoTracker
@@ -78,7 +78,7 @@ function undoRedoCanvas(trackObj) {
     undoRedoTracker = trackObj.undoRedoTracker;
 
     let url = undoRedoTracker[track];
-    let img = new Image(); // new image reference element
+    let img = new Image();
     img.src = url;
     img.onload = (e) => {
         tool.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -133,7 +133,7 @@ download.addEventListener("click", (e) => {
 
 
 socket.on("beginPath", (data) => {
-    // data -> data from server
+    
     beginPath(data);
 })
 socket.on("drawStroke", (data) => {
